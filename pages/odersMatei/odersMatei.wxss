@@ -1,0 +1,56 @@
+/* pages/odersMatei/odersMatei.wxss */
+
+.page_bd {
+  background: #fff;
+}
+.shop_list {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 8px 0 8px;
+  height: 35px;
+  align-items: center;
+  border-bottom: 1px solid #eee;
+}
+.price_num{
+  color: #f90;
+}
+.state {
+  color: #f90;
+}
+.oder_price{
+  color: #f90;
+}
+.address {
+  height: 40px;
+  line-height: 40px;
+  border-bottom: 1px solid #eee;
+  text-indent: 8px;
+}
+
+.shop_damilte {
+  display: flex;
+  align-items: center;
+  border-bottom: 5px solid #eee;
+}
+
+.image_vw image {
+  width: 80px;
+  height: 80px;
+}
+.rigth_vw{
+  display: flex;
+  flex-direction: column;
+}
+.numCount{
+  color: #f90;
+  font-size: 12px;
+}
+.goToBys{
+  width: 85%;
+  color: #fff;
+  background: #f90;
+  font-size: 13px;
+  height: 35px;
+  margin-top: 20px;
+  margin-bottom: 25px;
+}

@@ -1,0 +1,43 @@
+/* pages/MassageList/MassageList.wxss */
+.page_bd{
+  background: #fff;
+}
+.masLIst{
+  width: 98%;
+  margin: 0 auto;
+  border-bottom: 1px solid #eee;
+  margin-bottom: 5px;
+}
+.title_vw text:first-child{
+  font-size: 0.8rem;
+}
+.timer_tx{
+  font-size: 0.7rem;
+  color: #999;
+}
+.title_vw{
+  display: flex;
+  align-items: center;
+  height: 35px;
+  border-bottom: 1px solid #eee;
+  justify-content: space-between;
+}
+.magconten{
+  padding-top: 5px;
+  padding-bottom: 10px;
+  font-size: 12px;
+  color: #999;
+}
+.removeMsg{
+  position: fixed;
+  right: 8px;
+  top: 50%;
+  border: 1px solid #f90;
+  width: 45px;
+  text-align: center;
+  height: 43px;
+  line-height: 43px;
+  background: #f90;
+  color: #fff;
+  border-radius: 50px;
+}

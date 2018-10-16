@@ -1,0 +1,49 @@
+<!--pages/violation/violation.wxml-->
+<view class='page'>
+  <view class='searchCarsViolations'>
+    <view>
+      <label>车牌号码：</label>
+      <input class='carNameipt'></input>
+    </view>
+    <view>
+      <label>车架号码：</label>
+      <input class='carNameipt'></input>
+      <icon class='iconfont icon-wenhao'></icon>
+    </view>
+    <view>
+      <label>发动机号：</label>
+      <input class='carNameipt'></input>
+      <icon class='iconfont icon-wenhao'></icon>
+    </view>
+    <button class='search_btn'>查询</button>
+  </view>
+  <view class='weui-flex list_nav'>
+    <view>
+      <view class='bg_image'>
+        <image src='http://www.weifeng360.com/mobiweifeng/common/images/svg/wei.svg'></image>
+      </view>
+      <text>违章查询</text>
+    </view>
+    <view>
+      <view class='bg_image' style='background:#029EFC'>
+        <image src='http://www.weifeng360.com/mobiweifeng/common/images/svg/jiazhao.svg'></image>
+      </view>
+      <text>查驾照分</text>
+    </view>
+    <view>
+      <view class='bg_image' style='background:#F95F43'>
+        <image src='http://www.weifeng360.com/mobiweifeng/common/images/svg/xianxing.svg' class='xainx_sech'></image>
+      </view>
+      <text>限行查询</text>
+    </view>
+    <view>
+      <view class='bg_image' style='background:#8760D3'>
+        <image src='http://www.weifeng360.com/mobiweifeng/common/images/svg/vin_chaxun.svg'></image>
+      </view>
+      <text>VIN查询</text>
+    </view>
+  </view>
+    <view class='logoimg' bindtap='downIndex'>
+      <image src='../../images/logo3.png'></image>
+    </view>
+</view> 

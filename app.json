@@ -1,0 +1,71 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/my/my",
+    "pages/fenlei/fenlei",
+    "pages/share/share",
+    "pages/oder/oder",
+    "pages/odersMatei/odersMatei",
+    "pages/shop/shop",
+    "pages/settlement/settlement",
+    "pages/address/address",
+    "pages/addAddr/addAddr",
+    "pages/lookatcar/lookatcar",
+    "pages/MassageList/MassageList",
+    "pages/checkcar/checkcar",
+    "pages/login/login",
+    "pages/maintain/maintain",
+    "pages/orderdetails/orderdetails",
+    "pages/deduction/deduction",
+    "pages/violation/violation",
+    "pages/mygarage/mygarage",
+    "pages/detailslei/detailslei",
+    "pages/Mytrial/Mytrial"
+  ],
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#363940",
+    "navigationBarTitleText": "养车网",
+    "navigationBarTextStyle": "#fff",
+    "backgroundColor": "#eee",
+    "onReachBottomDistance":20
+  },
+  "tabBar": {
+    "color": "#000",
+    "borderStyle": "white",
+    "backgroundColor": "#fff",
+    "selectedColor": "#e77a11",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "images/首页.png",
+        "selectedIconPath": "images/首页-选中.png"
+      },
+      {
+        "pagePath": "pages/fenlei/fenlei",
+        "text": "分类",
+        "iconPath": "images/分类.png",
+        "selectedIconPath": "images/分类-选中.png"
+      },
+      {
+        "pagePath": "pages/oder/oder",
+        "text": "订单",
+        "iconPath": "images/订单.png",
+        "selectedIconPath": "images/订单-选中.png"
+      },
+      {
+        "pagePath": "pages/shop/shop",
+        "text": "购物车",
+        "iconPath": "images/购物车.png",
+        "selectedIconPath": "images/购物车-选中.png"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "text": "我的",
+        "iconPath": "images/fwode.png",
+        "selectedIconPath": "images/true_me.png"
+      }
+    ]
+  }
+}

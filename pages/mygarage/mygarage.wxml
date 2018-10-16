@@ -1,0 +1,16 @@
+<!--pages/mygarage/mygarage.wxml-->
+<view class='page'>
+  <view class='garage_list'>
+    <view class='car_leiList'>
+      <view class='weui-flex'>
+          <icon class='iconfont icon-xuanzhong'></icon>
+          <text class='carName'>揽胜极光(进口) 2018款 240PS HSE DYNAMIC 敞篷版</text>
+      </view>
+      <view class='weui-flex'>
+        <text>删除</text>
+         <text>查违章</text>
+          <text>完善信息</text>
+      </view>
+    </view>
+  </view>
+</view>

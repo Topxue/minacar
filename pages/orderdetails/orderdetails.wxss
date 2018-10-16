@@ -1,0 +1,221 @@
+/* pages/orderdetails/orderdetails.wxss */
+
+.page {
+  background: #fff;
+  height: 100%;
+}
+
+.view_topname {
+  border-bottom: 1px solid #eee;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 99;
+  background: #fff;
+}
+
+.content {
+  height: 100%;
+  margin-top: 53px;
+}
+
+.imags_vw {
+  text-align: center;
+}
+
+.bannerImgs {
+  width: 100%;
+  height: 307px;
+}
+
+.swper_vw {
+  height: 300px;
+}
+
+.details_big {
+  margin: 0 auto;
+  width: 95%;
+}
+
+.title_name {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.jiesao {
+  color: #a6a6a6;
+  font-size: 12px;
+  display: inline-block;
+  width: 100%;
+}
+
+.piceNum {
+  align-items: center;
+  justify-content: space-between;
+}
+
+.pice_i text:first-child {
+  color: #b12704;
+  display: block;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.pice_i text:first-child::before {
+  content: "热卖价￥";
+  font-size: 14px;
+}
+
+.pice_i text:last-child {
+  font-size: 13px;
+  color: #999;
+  text-decoration: line-through;
+}
+
+.pice_i text:last-child::before {
+  content: "市场价￥";
+}
+
+.num_adddown text:last-child {
+  margin-left: 34px;
+  font-size: 12px;
+  color: #999;
+}
+
+.sendService {
+  font-size: 12px;
+  height: 50px;
+  line-height: 50px;
+}
+
+.suitableCarModel {
+  align-items: center;
+}
+
+.suitableCarModel image:first-child {
+  width: 30px;
+  height: 25px;
+}
+
+.suitableCarModel text:last-child {
+  text-decoration: underline;
+}
+
+.myCarModelIntro {
+  height: 40px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.myCarModelIntro text:last-child {
+  color: #f90;
+}
+
+.saleTagIcon {
+  justify-content: space-around;
+  height: 50px;
+  align-items: center;
+  background: #efefef;
+}
+
+.saleTagIcon view icon {
+  font-size: 24px;
+  padding-right: 5px;
+  color: #999;
+}
+
+.saleTagIcon view text {
+  color: #555;
+}
+
+.saleTagIcon view:last-child icon {
+  padding-bottom: 5px;
+}
+
+.title_vw {
+  height: 50px;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid #ddd;
+}
+
+.imagBox {
+  width: 90%;
+  margin: 20px auto;
+  margin-bottom: 95px;
+}
+
+.imagBox image {
+  width: 100%;
+}
+
+.bigTwo_vw {
+  height: 100%;
+}
+
+.conten_ping {
+  justify-content: center;
+}
+
+.footer {
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 99;
+  width: 100%;
+  height: 50px;
+  background: #fff;
+  border-top: 1px solid #eee;
+}
+
+.shouye_Icon {
+  flex-direction: column;
+}
+
+.footer view {
+  display: flex;
+  width: 25%;
+  text-align: center;
+}
+
+.shouye_Icon text {
+  margin-top: -5px;
+}
+
+.footer view:nth-child(2) {
+  border-left: 1px solid #eee;
+}
+.num_shop{
+  position: absolute;
+  top: 13%;
+  right: 55%;
+  width: 17px;
+  height: 17px;
+  line-height: 17px;
+  font-size: 12px;
+  border-radius: 50px;
+  background: #f90;
+  color: #fff;
+}
+
+.footer view:nth-child(3) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  background: #85c360;
+  color: #fff;
+}
+
+.footer view:last-child {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  background: #f90;
+  color: #fff;
+}

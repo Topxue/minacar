@@ -1,0 +1,443 @@
+/* pages/maintain/maintain.wxss */
+
+.page {
+  background: #fff;
+  height: 100%;
+}
+
+.page_top {
+  background: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 20;
+}
+
+.nav_left view {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.car_name {
+  font-size: 13px;
+  border-bottom: 1px solid #eee;
+  height: 40px;
+  padding: 0 10px 0 10px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.car_name .name_text {
+  display: inline-block;
+  width: 72%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.zhankai_all {
+  display: flex;
+  height: 74px;
+  flex-wrap: wrap;
+}
+
+.lone_text {
+  width: 72%;
+}
+
+.car_name .chexk_text {
+  display: inline-block;
+  width: 16%;
+  height: 23px;
+  line-height: 21px;
+  text-align: center;
+  background: #fff1b8;
+  border: 1px dashed #d4d2c9;
+  border-radius: 2px;
+  box-sizing: border-box;
+  overflow: hidden;
+  color: #666;
+}
+
+.lft-imags {
+  width: 25px;
+  height: 25px;
+}
+
+.icon-down1 {
+  width: 16%;
+  text-align: center;
+  color: #999;
+  opacity: 0.5;
+  font-size: 25px;
+}
+
+.last_text {
+  width: 91%;
+}
+
+.proposeright {
+  padding-top: 8px;
+  width: 100%;
+}
+
+/*左侧栏主盒子*/
+
+.nav_left {
+  /*主盒子设置背景色为灰色*/
+  background: #f5f5f5;
+  text-align: center;
+}
+
+.scroll_left {
+  border-right: 1px solid #eee;
+  position: fixed;
+  left: 0;
+  top: 41px;
+  z-index: 10;
+  height: 85%;
+  background: #fff;
+  width: 25%;
+}
+
+/*左侧栏list的item*/
+
+.nav_left .nav_left_items {
+  height: 40px;
+  line-height: 40px;
+  padding: 6px 0;
+  border-bottom: 1px solid #dedede;
+  font-size: 13px;
+}
+
+.nav_left .nav_left_items.active {
+  background: #f90;
+  color: #fff;
+}
+
+/*右侧栏主盒子*/
+
+.nav_right {
+  /*右侧盒子使用了绝对定位*/
+  position: absolute;
+  top: 41px;
+  right: 0;
+  flex: 1;
+  /*宽度75%，高度占满，并使用百分比布局*/
+  width: 75%;
+  padding: 0 10px 10px 10px;
+  box-sizing: border-box;
+  background: #fff;
+}
+
+/*右侧栏list的item*/
+
+.nav_right .nav_right_items {
+  height: 100px;
+  border-bottom: 1px solid #eee;
+}
+
+.name_titx {
+  font-weight: 600;
+  font-size: 13px;
+}
+
+.nav_right .nav_right_items image {
+  /*被图片设置宽高*/
+  width: 100px;
+  height: 75px;
+  margin-top: 15px;
+}
+
+.pice_text::before {
+  content: "￥";
+}
+
+.pice_text {
+  display: block;
+  margin-top: 8px;
+  font-size: 13px;
+  color: #b12704;
+  font-weight: 700;
+}
+
+.add_skopcar {
+  float: right;
+  width: 70px;
+  background: #f90;
+  border-radius: 3px;
+  height: 25px;
+  line-height: 26px;
+  margin-top: -15px;
+  font-size: 90%;
+  text-align: center;
+  display: block;
+  color: #fff;
+  box-sizing: border-box;
+}
+
+.nav_right .nav_right_items text:first-child {
+  font-style: normal;
+  font-size: 12px;
+  font-weight: 700;
+  color: #000;
+  word-wrap: break-word;
+  word-break: break-all;
+  line-height: 18px;
+  height: 35px;
+  margin: 8px 0 2px 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.nodata_text {
+  color: black;
+  font-size: 14px;
+  text-align: center;
+}
+
+.name_scovw {
+  height: 40px;
+  align-items: center;
+  border-bottom: 1px solid #eee;
+}
+
+.pinpai {
+  display: inline-block;
+  width: 13%;
+}
+
+/* footer */
+
+.page_ft {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 20;
+  width: 100%;
+  background: #fff;
+  border-top: 1px solid #eee;
+  margin: 0 auto;
+  height: 50px;
+  display: block;
+  transition: all 300ms;
+}
+
+.icon-gouwuche {
+  position: absolute;
+  top: -23px;
+  left: 12px;
+  z-index: 11;
+  font-size: 47px;
+  color: #ccc;
+}
+
+.icon_num {
+  width: 30%;
+}
+
+.shop_num {
+  width: 70%;
+  height: 50px;
+  display: block;
+  text-align: center;
+  line-height: 50px;
+  text-indent: 20%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  background: #eee;
+}
+
+.go_shopsnum {
+  border-radius: 0;
+  background: #ccc;
+  color: #fff;
+  font-size: 100%;
+  display: block;
+  width: 30%;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  float: right;
+}
+
+.nav_right view view:last-child {
+  padding-bottom: 40px;
+  border-bottom: none;
+}
+
+.shangpin::after {
+  content: "个商品";
+}
+
+.shangpin {
+  float: left;
+  line-height: 30px;
+  height: 30px;
+  margin: 15px 0 15px 85px;
+  border-right: 1px solid #cecece;
+  padding-right: 6px;
+  width: 52%;
+}
+
+.number_txt {
+  color: #f90;
+}
+
+.totalMoney {
+  position: absolute;
+  left: 10.5rem;
+}
+
+.totalMoney text {
+  text-align: center;
+  display: block;
+}
+
+.totalMoney text:last-child {
+  font-size: 12px;
+}
+
+.totalMoney text:first-child {
+  font-size: 16px;
+}
+
+.moneyNum {
+  color: #f90;
+}
+
+.moneyNum::before {
+  content: "￥";
+}
+
+.name_scoll {
+  white-space: nowrap;
+  width: 55%;
+}
+.check_bgdefut{
+  text-align: center;
+  font-size: 12px;
+}
+.check_bg{
+  color: #f90;
+}
+.name_scovw {
+  width: 100%;
+  position: fixed;
+  z-index: 10;
+  background: #fff;
+}
+
+.viwe_listRight {
+  margin-top: 40px;
+}
+
+.shopIcon {
+  color: #e77a11;
+}
+
+.go_slement {
+  background: #f90;
+}
+
+.textcar {
+  display: none;
+  transition: all 0.3s;
+}
+
+.pop_vw {
+  height: 43px;
+  border-bottom: 1px solid #eee;
+  align-items: center;
+}
+
+.icon-fs-line {
+  font-size: 25px;
+  color: #f90;
+}
+
+.pop_vw text:nth-child(2) {
+  font-size: 15px;
+  color: #666;
+}
+
+.remove_vw {
+  align-items: center;
+  width: 85%;
+}
+.remove_vw text:last-child{
+  display: block;
+}
+.listviw-list image {
+  width: 107px;
+  height: 95px;
+}
+
+.nowPrice::before {
+  content: "￥";
+}
+.nowPrice {
+  margin-top: 8px;
+  display: block;
+  color: #d32d2e;
+}
+.infoName {
+  width: 96%;
+  color: #333;
+  font-size: 14px;
+  height: 33px;
+  line-height: 18px;
+  padding: 8px 0 2px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+.remoc_tetx{
+ align-items: center;
+}
+.proposeright_down{
+  width: 75%;
+  margin-left: -10px;
+  padding-top: 5px;
+}
+.listviw-list{
+  border-bottom: 1px solid #eee;
+}
+.tui-number-group {
+  display: table;
+  table-layout: fixed;
+  width: 98px;
+  text-align: center;
+  border-radius: 6px;
+  border: 1px solid #eee;
+  overflow: hidden;
+}
+
+.tui-number-cell {
+  display: table-cell;
+  line-height: 1.7;
+  border-radius: 0;
+}
+
+button::after {
+  border: none;
+}
+.tui-gallery-list {
+  display: flex;
+  width: 97%;
+  margin-top: -23px;
+  justify-content: flex-end;
+}
+.down_srocll{
+  height: 260px;
+}

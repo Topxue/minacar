@@ -1,0 +1,10 @@
+<!--pages/login/login.wxml-->
+<view class='page'>
+  <input class='ipone_ipt' bindblur='phoneinput'  value='{{iponeVal}}' placeholder='请输入手机号' type='number' maxlength='11'></input>
+  <view class='code_view'>
+    <input class='ipone_ipt code_ipt' bindblur='send_code' value='{{codeVal}}' placeholder='请输入短信验证码' type='number' maxlength='6'></input>
+    <button class='send_code' type='button' disabled='{{codeDis}}' catchtap='sendCodes'>{{sendCode}}</button>
+  </view>
+  <button class='weui-btn login_btn' bindtap='logingo' type='button' loading='{{loading}}'>登录</button>
+</view>
+

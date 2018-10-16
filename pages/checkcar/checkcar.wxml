@@ -1,0 +1,45 @@
+<!--pages/checkcar/checkcar.wxml-->
+<view class='page'>
+  <view class='page_bd'>
+   
+  </view>
+  <view class='big_checked'>
+    <view class="name_carlei {{saiChecked?'saicheck':'defulst'}}">
+      <view class='weui-flex name_txt'>
+        <text>选择品牌</text>
+      </view>
+      <scroll-view scroll-y style='height:93%;'>
+        <block wx:for="{{items}}" wx:key="item">
+          <view bindtap='checkcarXi' class="{{activeIndex==item.id?'active':''}}" id="{{item.id}}">{{item.name}}</view>
+        </block>
+      </scroll-view>
+    </view>
+    <view class="name_carlei {{saiCheckedtwo?'saichecktwo':'defulst'}}">
+      <view class='weui-flex name_txt'>
+        <icon class='iconfont icon-left' bindtap='checkChexi'></icon>
+        <text>选择车系</text>
+      </view>
+      <view class='list_vw'>
+        <scroll-view scroll-y style='height:93%;'>
+          <block wx:for="{{carItems}}" wx:key="item">
+            <view bindtap='checkcaryear' id="{{item.id}}">{{item.comp_name}}</view>
+          </block>
+        </scroll-view>
+      </view>
+    </view>
+    <view class="name_carlei {{saiCheckedthre?'saicheckthre':'defulst'}}">
+      <view class='weui-flex name_txt'>
+        <icon class='iconfont icon-left' bindtap='checYear'></icon>
+        <text>选择年款</text>
+      </view>
+      <view class='list_vw'>
+        <scroll-view scroll-y style='height:83%;'>
+          <block wx:for="{{yearItems}}" wx:key="item">
+            <view bindtap='yearCheck' class="{{activethreIndex==item.id?'active':''}}" id='{{item.id}}' data-curenName='{{item.fullname}} {{item.name}} {{item.sizetype}}'>{{item.fullname}} {{item.name}} {{item.sizetype}}</view>
+          </block>
+        </scroll-view>
+      </view>
+      <text class='sure_btn' bindtap='badDolond'>确认</text>
+    </view>
+  </view>
+</view>

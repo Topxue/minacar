@@ -1,0 +1,54 @@
+<!--pages/address/addAddr.wxml-->
+<view class='topView'>
+  <view class='nameView'>
+    <view class='item-left'>
+      联系人
+    </view>
+    <view class='item-right'>
+      <input type='text' maxlength='5' placeholder='姓名' value='{{getAddress.username}}' data-key="getAddress.username" bindblur='getInputVal'></input>
+    </view>
+  </view>
+</view>
+<view class='telView'>
+  <view class='item-left'>
+    电话
+  </view>
+  <view class='item-right'>
+    <input type='number' maxlength='11' placeholder='手机号码' value="{{getAddress.phone}}" data-key="getAddress.phone" bindblur='getInputVal'></input>
+  </view>
+</view>
+<view class='addrView'>
+  <view class='item-left'>
+    地址
+  </view>
+  <view class='item-right' bindtap='chooseAddr'>
+    <text wx:if="{{getAddress.addr_name == null}}" class='noAddr'>请选择收获地址</text>
+    <block wx:elif="{{types_id==1}}">
+       <text class='addrName'>{{getAddress.city}}{{getAddress.area}}</text>
+    </block>
+    <text wx:else class='addrName'>{{getAddress.addr_name}}</text>
+
+  </view>
+</view>
+<view class='topView' style='border-top:0px;margin-top:0px;'>
+<view class='nameView'>
+  <view class='item-left'>
+    详细
+  </view>
+  <view class='item-right'>
+    <input type='text' maxlength='50' placeholder='详细地址 如门牌号等' data-key="getAddress.addr_detail" bindblur='getInputVal' value='{{getAddress.addr_detail}}'></input>
+  </view>
+  </view>
+  <view class='nameView'>
+    <view class='item-left'>
+  
+    </view>
+  </view>
+</view>
+<view class='isDefault' data-key="isDefault" data-val="{{getAddress.isDefault}}" bindtap='setCard'>
+  设为默认地址
+  <icon type='success' color="{{isDefault == 0?'#ccc':'#01d241'}}" size='18'></icon>
+</view>
+<view class='payBtn' bindtap='timeOutMethod'>
+  保存
+</view>

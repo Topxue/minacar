@@ -1,0 +1,98 @@
+<!--pages/maintain/maintain.wxml-->
+<view class='page'>
+  <view class='page_top'>
+    <view class='weui-flex car_name'>
+      <image src='../../images/carname.png' class='lft-imags'></image>
+      <text class='name_text'>{{curenNmaes}}</text>
+      <text class='chexk_text' bindtap='checkcarLoad'>切换</text>
+    </view>
+  </view>
+  <!-- page-body -->
+  <view class="page_bd">
+    <!--左侧栏-->
+    <view class="nav_left">
+      <scroll-view scroll-y class='scroll_left'>
+        <block wx:for="{{navLeft}}" wx:key="id">
+          <!--当前项的id等于item项的id，那个就是当前状态-->
+          <!--用data-index记录这个数据在数组的下标位置，使用data-id设置每个item的id值，供打开2级页面使用-->
+          <view class="nav_left_items {{curNav == item.type_id ? 'active' : ''}}" bindtap="switchRightTab" data-index="{{index}}" data-id="{{item.type_id}}">{{item.name}}</view>
+        </block>
+      </scroll-view>
+    </view>
+    <!--右侧栏-->
+    <view class="nav_right">
+      <!--如果有数据，才遍历项-->
+      <view class='weui-flex name_scovw'>
+        <text class='pinpai'>品牌：</text>
+        <scroll-view class='name_scoll' scroll-x>
+          <block wx:for="{{nameItems}}" wx:key="itmes">
+            <text class='check_bgdefut {{check_bgs == item.id?"check_bg":""}}' bindtap='brandTab' data-goods_id='{{item.id}}'> {{item.name}} </text>
+          </block>
+        </scroll-view>
+      </view>
+      <view wx:if="{{cateItems.length > 0}}" class='viwe_listRight'>
+        <block wx:for="{{cateItems}}" wx:key="id">
+          <view class="weui-flex nav_right_items">
+            <image src="{{item.image1}}"></image>
+            <view class='proposeright'>
+              <text class='name_titx'>{{item.name}}</text>
+              <text class='pice_text'>{{item.price}}</text>
+              <text class='add_skopcar' bindtap='addShopping' data-goods_id='{{item.goods_id}}'>加入清单</text>
+            </view>
+          </view>
+        </block>
+      </view>
+      <!--如果无数据，则显示数据-->
+      <view class="nodata_text" wx:else>该分类暂无数据</view>
+    </view>
+  </view>
+  <view class='page_ft'>
+    <view class='icon_num'>
+      <icon class="iconfont icon-gouwuche {{iconSlement?'shopIcon':''}}" data-show="{{ true }}" bindtap="openPopup2"></icon>
+      <text class="shop_num  {{iconSlement?'textcar':''}}">购物车还是空的~</text>
+      <view class='shangpin'>
+        <text class='number_txt'>{{shopNums}}</text>
+      </view>
+      <view class='totalMoney'>
+        <text class='moneyNum'>{{moneyNums}}</text>
+        <text>(不含运费)</text>
+      </view>
+    </view>
+    <button class="go_shopsnum {{iconSlement?'go_slement':''}}" bindtap='goSlement' disabled='{{btnDisable}}'>去结算</button>
+  </view>
+  <!-- 抽屉购物车 -->
+  <ui-popup show="{{ show2 }}" height="300" _pid="{{_pid}}">
+    <view>
+      <view class='weui-flex pop_vw'>
+        <view class='weui-flex remove_vw'>
+          <icon class='iconfont icon-fs-line'></icon>
+          <text>购物清单</text>
+        </view>
+        <view class='weui-flex remoc_tetx' bindtap="handleShow2">
+          <icon class='iconfont icon-shanchu'></icon>
+          <text>清空</text>
+        </view>
+      </view>
+      <view class='listviw'>
+        <scroll-view scroll-y class='down_srocll'>
+          <block wx:for="{{shoppingCart}}" wx:key="shoppingCart">
+            <view class="weui-flex nav_right_items listviw-list">
+              <image src="{{item.image1}}"></image>
+              <view class='proposeright_down'>
+                <text class='infoName'>{{item.name}}</text>
+                <text class='nowPrice'>{{item.price}}</text>
+                <view class="tui-gallery-list">
+                  <view class="tui-number-group">
+                    <button class="tui-number-cell" bindtap="nextNum" data-goods_id='{{item.goods_id}}' data-index='{{index}}'>-</button>
+                    <input class="tui-number-cell" type="number" value='{{item.num}}' disabled></input>
+                    <button class="tui-number-cell" bindtap="prevNum" data-goods_id='{{item.goods_id}}' data-index='{{index}}'>+</button>
+                  </view>
+                </view>
+              </view>
+            </view>
+          </block>
+        </scroll-view>
+      </view>
+    </view>
+  </ui-popup>
+</view>

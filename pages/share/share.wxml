@@ -1,0 +1,9 @@
+<!--pages/setting/share.wxml-->
+<!-- <view class='bgView'>
+  <image src='../images/share2.png' mode='widthFix' class='bgPic'></image>
+  <image src='{{userInfo.headimg}}' class='userPic'></image>
+</view> -->
+<view class='newBg'>
+
+</view>
+<button  open-type='share' hover-class='none'>立即分享</button>

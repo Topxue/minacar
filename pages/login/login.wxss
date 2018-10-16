@@ -1,0 +1,53 @@
+/* pages/login/login.wxss */
+
+.page {
+  padding-top: 25px;
+  height: 100%;
+  background: #fff;
+}
+
+.ipone_ipt {
+  padding-left: 10px;   
+  border-radius: 5px;
+  margin: 0 auto;
+  border: 1px solid #eee;
+  width: 70%;
+  background: #fff;
+  height: 40px;
+}
+.code_view{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 73%;
+  margin: 0 auto;
+}
+.code_ipt {
+  margin-top: 15px;
+  width: 64%;
+  border-right: none;
+}
+.send_code {
+  z-index: 10;
+  margin-top: 15px;
+  width: 100px;
+  height: 42px;
+  line-height: 42px;
+  margin-left: -9px;
+  color: #f90;
+  font-size: 12px;
+}
+
+button[disabled] {
+  color: #f90;
+}
+.login_btn {
+  margin-top: 50px;
+  width: 70%;
+  background-color: #f90;
+  color: #fff;
+  border: none;
+  height: 45px;
+  line-height: 45px;
+  font-size: 15px;
+}

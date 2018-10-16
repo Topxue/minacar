@@ -1,0 +1,208 @@
+/* pages/settlement/ settlement.wxss */
+
+.address_vw {
+  font-size: 13px;
+  height: 80px;
+  background: #fdf5ee;
+}
+
+.address_vw view:first-child {
+  padding-top: 15px;
+}
+
+.address_vw view {
+  align-items: center;
+  text-indent: 48px;
+}
+
+.address_vw view:last-child {
+  text-indent: 15px;
+}
+
+.address_vw view:last-child text {
+  flex-wrap: wrap;
+  text-indent: 0px;
+  padding-left: 14px;
+  width: 78%;
+}
+
+.name_s::before {
+  content: "收货人： ";
+}
+
+.icon-dingwei2 {
+  color: #f90;
+}
+
+.add_adres {
+  margin: 5px 0 8px 0;
+  color: #fff;
+  width: 100%;
+  height: 40px;
+  background: #f90;
+  font-size: 15px;
+  align-items: center;
+  justify-content: center;
+}
+
+.line_view {
+  background: url(http://www.weifeng360.com/mobiweifeng/common/images/sureBottom.png) repeat-x bottom;
+  height: 5px;
+}
+
+.commodity {
+  border-bottom: 1px solid #eee;
+  padding-left: 10px;
+  align-items: center;
+  height: 100px;
+  background: #fff;
+}
+
+.pc_bcleft text {
+  display: inline-block;
+}
+
+.pc_bcleft {
+  width: 76%;
+  margin-left: 8px;
+}
+
+.pc_bcleft text:last-child {
+  padding-left: 5px;
+  color: #f90;
+}
+
+/* .pc_bcleft text:last-child::before {
+  content: "x ";
+} */
+
+/* .pc_bcleft text:last-child::after {
+  content: " 件";
+}
+
+.nameCont {
+  display: flex;
+  justify-content: space-between;
+  width: 95%;
+  align-items: center;
+} */
+
+.pc_bcleft text:first-child {
+  color: #555;
+  font-size: 13px;
+}
+
+.pc_bcleft text:last-child {
+  font-size: 12px;
+}
+.numPri{
+  color: #f90;
+}
+.nowPrice {
+  margin-top: 8px;
+  color: #b12704;
+  font-weight: 700;
+}
+
+.commodity image {
+  width: 80px;
+  height: 80px;
+}
+
+.down_loda {
+  background: #eee;
+}
+
+/* details */
+
+.details_vw {
+  padding-top: 10px;
+  height: 80px;
+  background: #fff;
+  margin-top: 5px;
+}
+
+.details_vw view {
+  font-size: 12px;
+  padding: 5px 12px 0 15px;
+  justify-content: space-between;
+}
+
+.details_vw view text:last-child::before {
+  content: "￥";
+}
+
+.details_vw view text {
+  color: #555;
+}
+
+.details_vw view:first-child>text:last-child {
+  color: #e77a11;
+}
+
+.weui-cell_input {
+  height: 43px;
+  background: #fff;
+  padding-bottom: 20%;
+}
+
+.staty_chinese {
+  width: 46px;
+  font-size: 13px;
+}
+
+.pice_btn {
+  justify-content: flex-end;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  align-items: center;
+  height: 48px;
+  z-index: 99;
+  background: #fff;
+}
+
+.pice_btn text:nth-child(2) {
+  color: #b12704;
+}
+
+.pice_btn text:nth-child(2)::before {
+  content: "￥";
+}
+
+.btn_goshop {
+  width: 100px;
+  background: #f90;
+  color: #fff;
+  height: 48px;
+  margin-right: 0;
+  border-radius: 0;
+  position: static;
+  font-size: 12px;
+}
+
+button[size=mini] {
+  border: 1px solid #eee;
+  line-height: 45px;
+}
+
+.pice_nuber {
+  width: 70%;
+  text-align: right;
+}
+.move_lei{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 auto;
+  background: #fff;
+  height: 32px;
+  padding: 0 5px 0 10px;
+  font-size: 13px;
+  color: #555;
+}
+.right_down{
+  padding-bottom: 5px;
+  font-size: 16px;
+}

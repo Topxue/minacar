@@ -1,0 +1,33 @@
+/* pages/setmsg/setmsg.wxss */
+.page {
+  padding-top: 8px;
+  background: #fff;
+}
+.label-list {
+  padding: 0 12px 0 12px;
+  justify-content: space-between;
+  align-items: center;
+  height: 50px;
+  align-items: center;
+  border-bottom: 1px solid #eee;
+}
+.label-list image {
+  width: 42px;
+  height: 40px;
+  border-radius: 50px;
+}
+.label-list .icon-right{
+  opacity: 0.5;
+}
+.label-list text:nth-child(2){
+  color: #999;
+  width: 77%;
+  text-align: right;
+}
+.vip_text{
+  padding-right: 35px;
+  width: 61% !important;
+}
+.my_cark{
+  color: #f90;
+}

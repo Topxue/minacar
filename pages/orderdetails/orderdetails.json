@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText":"商品详情",
+  "usingComponents": {
+    "ui-tabs": "../../packages/touchui-wx-components/ui-tabs/dist/index",
+    "ui-tab": "../../packages/touchui-wx-components/ui-tab/dist/index",
+    "ui-stepper": "../../packages/touchui-wx-components/ui-stepper/dist/index"
+  }
+}

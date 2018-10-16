@@ -1,0 +1,214 @@
+/* pages/checkcar/checkcar.wxss */
+
+.page {
+  padding-top: 1px;
+  background: #fff;
+  height: 100%;
+}
+
+.iptboder {
+  border: 1px solid red !important;
+  width: 75% !important;
+  height: 36px !important;
+  line-height: 36px !important;
+  border-right: none !important;
+}
+
+.check_vw {
+  width: 90%;
+  margin: 10px 5% 0;
+  height: 38px;
+  justify-content: center;
+}
+
+.check_vw text {
+  transition: all 0.3s;
+  text-align: center;
+  width: 50%;
+  height: 38px;
+  line-height: 38px;
+}
+
+.defult {
+  /* border-radius: 5px; */
+  color: #666;
+  background: #eee;
+}
+
+.selecteds {
+  transition: all 0.3s;
+  border-radius: 0 5px 5px 0;
+  background-image: linear-gradient(90deg, #ffd02b, #ff9901);
+  color: #fff;
+}
+
+.selected {
+  transition: all 0.3s;
+  border-radius: 5px 0 0 5px;
+  background-image: linear-gradient(90deg, #ffd02b, #ff9901);
+  color: #fff;
+}
+
+.show {
+  display: block;
+  text-align: center;
+  line-height: 128rpx;
+}
+
+.hidden {
+  display: none;
+  text-align: center;
+  line-height: 200px;
+}
+
+.ipt_vw {
+  justify-content: space-between;
+  border: 1px solid #ddd;
+  border-right: none;
+  width: 90%;
+  text-indent: 0;
+  margin: 10px 5%;
+  height: 38px;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.chaxun_btn {
+  width: 25%;
+  font-size: 15px;
+  background-image: linear-gradient(90deg, #ffd02b, #ff9901);
+  border: none;
+  height: 38px;
+  line-height: 38px;
+  color: #fff;
+}
+
+.ipt_vw input:first-child {
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  width: 60%;
+  height: 37px;
+  line-height: 37px;
+}
+
+.check_name {
+  width: 90%;
+  margin: 30px 5% 0;
+  height: 45px;
+  line-height: 45px;
+  border-radius: 5px;
+  display: block;
+  color: #fff;
+  text-align: center;
+  background-image: -webkit-linear-gradient(90deg, #ffd02b, #ff9901);
+  background-image: linear-gradient(90deg, #ffd02b, #ff9901);
+}
+
+.vin_vw {
+  margin-top: 25px;
+}
+
+.imas_car {
+  margin-top: 30px;
+}
+
+.saicheck {
+  background: #fff;
+  z-index: 10;
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.defulst {
+  display: none;
+}
+
+.name_txt {
+  display: block;
+  background: #eee;
+  position: relative;
+  width: 100%;
+  height: 50px;
+  text-align: center;
+}
+
+.name_txt .icon-left {
+  color: #ff9901;
+  position: relative;
+  left: -40%;
+  top: -5%;
+}
+
+.name_txt text {
+  display: inline-block;
+  height: 45px;
+  position: relative;
+  left: -30px;
+}
+
+.name_carlei view {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  display: block;
+  width: 100%;
+  height: 45px;
+  line-height: 45px;
+  text-indent: 12px;
+  border-bottom: 1px solid #eee;
+}
+
+.saichecktwo {
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 10;
+  position: fixed;
+  top: 0;
+  padding-left: 60px;
+  height: 100%;
+  width: 100%;
+}
+
+.saicheckthre {
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 10;
+  position: fixed;
+  top: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.saicheckfour {
+  z-index: 10;
+  position: fixed;
+  top: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.list_vw {
+  height: 100% !important;
+  background: #fff;
+}
+
+.active {
+  background-image: linear-gradient(90deg, #ffd02b, #ff9901);
+  color: #fff;
+}
+
+.sure_btn {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: 2;
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+  font-size: 16px;
+  border: none;
+  text-align: center;
+  color: #fff;
+  background-image: linear-gradient(90deg,#ffd02b,#ff9901);
+}

@@ -1,0 +1,88 @@
+<!--pages/settlement/ settlement.wxml-->
+<view class='page'>
+  <!-- add address -->
+  <view class='page_bd'>
+    <view class='address_vw'>
+      <view class='weui-flex' wx:if="{{showList===false}}">
+        <text class='name_s'>{{addressLIst.username}}</text>
+        <text>{{addressLIst.phone}}</text>
+      </view>
+      <view class='weui-flex' wx:else="{{showList===true}}">
+        <text class='name_s'>{{addressLIst.name}}</text>
+        <text>{{addressLIst.phone}}</text>
+      </view>
+      <view class='weui-flex' wx:if="{{showList===false}}">
+        <icon class='iconfont icon-dingwei2'></icon>
+        <text class='weui-felx'>{{addressLIst.province}} {{addressLIst.city}} {{addressLIst.area}}{{addressLIst.addr_detail}}</text>
+      </view>
+      <view class='weui-flex' wx:else="{{showList===true}}">
+        <icon class='iconfont icon-dingwei2'></icon>
+        <text class='weui-felx'>{{addressLIst.province}} {{addressLIst.city}} {{addressLIst.area}}{{addressLIst.address}}</text>
+      </view>
+    </view>
+    <view class='line_view'></view>
+    <navigator url='../address/address'>
+      <view class='weui-flex add_adres'>+添加新地址</view>
+    </navigator>
+    <!-- commodity -->
+    <view class='page_bd'>
+    
+     <view class='shopli' wx:if="{{type_show == 1}}">
+        <view class='weui-flex commodity' hover-class='down_loda' hover-stay-time='100'>
+          <image src='{{shopImg}}'></image>
+          <view class='pc_bcleft'>
+            <view class='nameCont'>
+              <text>{{titleName}} <text class='numPri'> x{{shopCount}}件</text></text>
+            </view>
+            <view class='nowPrice'>￥{{price}}</view>
+          </view>
+        </view>
+      </view>
+      <block wx:else>
+      <view class='shopli' wx:for="{{shopLists}}" wx:key="shopLists.goods_id">
+        <view class='weui-flex commodity' hover-class='down_loda' hover-stay-time='100'>
+          <image src='{{item.image1}}'></image>
+          <view class='pc_bcleft'>
+            <view class='nameCont'>
+              <text>{{item.name}} <text> x{{item.goods_count}}件</text></text>
+            </view>
+            <view class='nowPrice'>￥{{item.price}}</view>
+          </view>
+        </view>
+      </view>
+      </block>
+      <view class='move_lei' bindtap='checkLei'><text>选择配送类型</text> <icon class='iconfont icon-right right_down'></icon></view>
+      <view class='details_vw'>
+        <view class='weui-flex'>
+          <text>商品总价</text>
+          <text>{{piceNumber}}</text>
+        </view>
+        <view class='weui-flex'>
+          <text>运费</text>
+          <text>0.00</text>
+        </view>
+        <view class='weui-flex'>
+          <text>优惠</text>
+          <text>0.00</text>
+        </view>
+      </view>
+    </view>
+    <!-- staty_chinese -->
+    <view class="weui-cell weui-cell_input">
+      <view class="weui-cell__hd">
+        <view class="weui-label staty_chinese">留言</view>
+      </view>
+      <view class="weui-cell__bd">
+        <input class="weui-input" placeholder="请在这里输入留言..." bindblur='beizVal' />
+      </view>
+    </view>
+    <!-- oders_pice number -->
+    <view class='weui-flex pice_btn'>
+      <view class='pice_nuber'>
+        <text>应付金额 </text>
+        <text>{{piceNumber}}</text>
+      </view>
+      <button type='button' class='btn_goshop' size='mini' bindtap='goToBy'>立即下单</button>
+    </view>
+  </view>
+</view>

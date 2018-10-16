@@ -1,0 +1,59 @@
+<view class="page">
+  <!-- page_hd -->
+  <view class='flex-item top-seckh'>
+    <view class='top_view' bindtap='myCnter'>
+      <image src='../../images/个人中心.png' class='img_top'></image>
+    </view>
+    <view class='sech_view'>
+      <input type='text' class="inp_tetx" value='' placeholder="请输入商品名称" bindblur="getValue" />
+      <icon class="iconfont icon-sousuo" bindtap='seachShop'></icon>
+    </view>
+  </view>
+  <!-- page__bd -->
+  <view class="page-body">
+    <view class="page-section page-section-spacing swiper">
+      <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+        <block wx:for="{{background}}" wx:key="*this">
+          <swiper-item>
+            <view class="swiper-item" data-goods_id='{{item.goods_id}}'>
+              <image src='{{item.image}}'></image>
+            </view>
+          </swiper-item>
+        </block>
+      </swiper>
+    </view>
+    <!--check car lei -->
+    <view class='check_car'>
+      <icon class='iconfont icon-jiaru'></icon>
+      <view class='check_t' bindtap='openWindow'>{{carCheckNmae}}</view>
+       <icon class="iconfont icon-del2{{removeIocn?'icon-dels':''}}" bindtap='removeCheckcar'></icon>
+    </view>
+    <!-- list -->
+    <view class="weui-flex weui_list">
+      <block wx:for='{{returnData}}' wx:key='list' wx:for-item="item">
+        <navigator url='../detailslei/detailslei?type_id={{item.type_id}}&son_id=0&sort=0'>
+          <view class="weui-flex__item">
+            <image src='{{item.logo}}'></image>
+            <view class="placeholder">{{item.name}}</view>
+          </view>
+        </navigator>
+      </block>
+    </view>
+    <!-- hot-tuijian -->
+    <view class="hot_tuijan">
+      <text></text>
+      <icon class='iconfont icon-PCbofangye_remen' style='margin-bottom:3px;'></icon>
+      <text>热卖推荐</text>
+      <text></text>
+    </view>
+    <!-- shop-list -->
+    <view class='shop_list'>
+      <view bindtap='loetOderdail' wx:for="{{hostShoplist}}" wx:key="*this" data-goods_id="{{item.goods_id}}">
+        <image src='{{item.image1}}'></image>
+        <text>{{item.name}}</text>
+        <text>{{item.price}}</text>
+      </view>
+    </view>
+  </view>
+
+</view>

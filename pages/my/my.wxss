@@ -1,0 +1,250 @@
+.bg_viewstop {
+  height: 150px;
+  border-bottom: 10px solid #f5f5f5;
+  color: #fff;
+  background-image: -webkit-linear-gradient(90deg, #ffd02b, #ff9901);
+  background-image: linear-gradient(90deg, #ffd02b, #ff9901);
+}
+
+/* aside_right */
+
+.aside_right {
+  position: fixed;
+  left: 100%;
+  top: 0;
+  z-index: 51;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.aside_left {
+  position: fixed;
+  top: 0;
+  z-index: 51;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.list_view {
+  width: 70%;
+  height: 100%;
+  margin-left: 30%;
+  background: #fff;
+}
+
+.list_view view {
+  height: 50px;
+  line-height: 50px;
+  text-indent: 20px;
+  border-bottom: 1px solid #ddd;
+}
+
+.down_list {
+  background: #ff9901;
+  color: #fff;
+}
+
+.vwicon_top {
+  align-items: center;
+  justify-content: flex-end;
+  padding: 0 8px 0 8px;
+}
+
+.vwicon_top .iconfont {
+  font-size: 26px;
+}
+
+.weui-cell_active {
+  background: none;
+}
+
+.pto_imgs {
+  position: absolute;
+  top: 45px;
+  left: 10px;
+  height: 70px;
+  width: 70px;
+  display: inline-block;
+  border: 5px solid #ffeba9;
+  border-radius: 100%;
+}
+
+.potos_view {
+  height: 100px;
+  align-items: center;
+  margin-top: -5px;
+}
+.potos_view button{
+  position: absolute;
+  opacity: 0;
+  width: 5rem;height: 4rem;
+  top: 2rem;left: 0;
+}
+.potos_view button::after{
+  border: 0;
+}
+.weui-media-box__hd_in-appmsg {
+  margin-right: 2.8em;
+  line-height: 50px;
+}
+
+.phone_num {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.icopre {
+  width: 50px;
+  height: 20px;
+  position: absolute;
+  top: 64px;
+  left: 232px;
+  border-radius: 10px;
+  background: #fff1d1 url('http://www.weifeng360.com/mobiweifeng/common/images/svg/user_chefu.svg') no-repeat center center / 40px;
+}
+
+.weui-media-box__desc {
+  margin-top: 10px;
+  display: flex;
+  width: 150px;
+  justify-content: space-between;
+}
+
+.weui-media-box__desc text:first-child {
+  padding-left: 20px;
+  color: #fff;
+  background: url('http://www.weifeng360.com/mobiweifeng/common/images/svg/wallet.svg') no-repeat left center / 15px;
+}
+
+.weui-media-box__desc text:last-child {
+  padding-left: 18px;
+  color: #fff;
+  background: url('http://www.weifeng360.com/mobiweifeng/common/images/svg/favorite.svg') no-repeat left center / 15px;
+}
+
+.coders {
+  top: 63px;
+  right: 10px;
+  display: inline-block;
+  background: url('http://www.weifeng360.com/mobiweifeng/common/images/svg/qr.svg') no-repeat center center / 30px;
+  height: 30px;
+  width: 30px;
+  position: absolute;
+}
+
+.car_listview {
+  background: #fff;
+}
+
+.icon-right {
+  color: #555;
+  opacity: 0.5;
+}
+
+/* addressList */
+
+.addressList {
+  color: #000;
+  margin-top: 24px;
+  background: #fff;
+  border-bottom: 10px solid #f5f5f5;
+}
+
+.oder_iocnRight {
+  font-size: 18px;
+}
+
+.icon_view {
+  height: 35px;
+  align-items: center;
+}
+
+.top-view {
+  padding: 0 8px 0 12px;
+  align-items: center;
+  justify-content: space-between;
+  height: 37px;
+  border-bottom: 1px solid #eee;
+  font-size: 13px;
+}
+.stats_oder {
+  text-align: center;
+  flex-direction: column;
+  width: 25%;
+  margin:10px 0 15px 0;
+}
+.oder_list icon{
+  font-size: 37px;
+  color: #999;
+}
+.stats_oder text:nth-child(2){
+  font-size: 12px;
+}
+/* tapclass */
+
+.downs_tap {
+  background: #eee;
+}
+
+.car_listview view {
+  border-bottom: 1px solid #eee;
+  justify-content: space-around;
+  height: 43px;
+  align-items: center;
+}
+
+.car_listview view image {
+  margin-left: 5px;
+  width: 6%;
+  height: 100%;
+}
+
+.my_cark text:nth-child(2) {
+  color: #000;
+}
+
+.my_cark text:nth-child(3) {
+  text-align: right;
+  width: 66%;
+  color: #999;
+  font-size: 12px;
+}
+
+.icon-fenxiang,.icon-lianxidianhua {
+  width: 26px;
+  text-align: center;
+  color: red;
+  font-size: 22px;
+}
+.icon-lianxikefu{
+   width: 26px;
+  text-align: center;
+  color: red;
+  font-size: 22px;
+  position: relative;
+}
+.service,.service_center{
+  position: relative;
+}
+.fenenjoy {
+  width: 57px;
+}
+.service_center{
+  opacity: 0;
+  width: 100%;
+  position: fixed;
+  z-index: 99;
+}
+.linaKe{
+  text-align: left !important;
+  color: #000 !important;
+  font-size: 13px !important;
+}
+.yexy_last{
+  display: inline-block;
+  width: 14%;
+  color: #999;
+  text-align: right;
+}

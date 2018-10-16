@@ -1,0 +1,37 @@
+<view class="page">
+  <view class='sech_view'>
+    <view class='ipt_view'>
+      <input class="inp_tetx" type='text' placeholder="汽油添加剂" value='{{seachVal}}' bindblur='getValue' />
+      <icon class="iconfont icon-sousuo" bindtap='seachIpt'></icon>
+    </view>
+  </view>
+  <!--主盒子-->
+  <view class="container">
+    <!--左侧栏-->
+    <view class="nav_left">
+      <view class="nav_left_items {{curNav == 1 ? 'active' : ''}}" data-catename="所有品牌" data-id='1' bindtap="allPname">{{allName}}      </view>
+      <block wx:for="{{returnData}}" wx:key="id">
+        <!--当前项的id等于item项的id，那个就是当前状态-->
+        <!--用data-index记录这个数据在数组的下标位置，使用data-id设置每个item的id值，供打开2级页面使用-->
+        <view class="nav_left_items {{curNav == item.type_id ? 'active' : ''}}" bindtap="switchRightTab" data-cateName='{{item.name}}' data-index="{{index}}" data-id="{{item.type_id}}">{{item.name}}</view>
+      </block>
+    </view>
+    <!--右侧栏-->
+    <view class="nav_right">
+      <text class='cate_name'>{{name}}</text>
+      <!--如果有数据，才遍历项-->
+      <view wx:if="{{cateItems}}">
+        <block wx:for="{{cateItems}}" wx:key="id">
+          <view class="nav_right_items" data-fatherId='{{item.father_id}}' data-type_id='{{item.type_id}}' data-brand_id='{{item.id}}' data-sonId='{{item.son_id}}' data-cureName='{{item.name}}' bindtap='goodList'>
+            <!--界面跳转 -->
+            <image src="{{item.logo}}"></image>
+            <text>{{item.name}}</text>
+          </view>
+        </block>
+      </view>
+      <!--如果无数据，则显示数据-->
+      <view class="nodata_text" wx:else>该分类暂无数据</view>
+    </view>
+  </view>
+
+</view>

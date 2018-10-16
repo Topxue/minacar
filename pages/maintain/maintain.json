@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText":"保养项目",
+    "usingComponents": {
+    "ui-popup": "../../packages/touchui-wx-components/ui-popup/dist/index"
+  }
+}

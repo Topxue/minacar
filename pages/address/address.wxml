@@ -1,0 +1,27 @@
+<!--pages/address/address.wxml-->
+<view class='addressList' wx:for="{{addressList}}" wx:key="{{addressList.a_id}}">
+  <view class='addrInfo' data-aid="{{item.a_id}}" data-sid="{{item.s_id}}" data-lat='{{item.lat}}' data-lng='{{item.lng}}' bindtap='chooseDefaultAddress'>
+    <view class='addrName' wx:if="{{showList == false}}">
+      <text decode="{{true}}" space="{{true}}" class='username'>{{item.username}}</text>
+      <text decode="{{true}}" space="{{true}}">&nbsp; &nbsp;{{item.phone}}</text>
+       <text class='states' wx:if="{{item.isDefault == 1}}">默认</text>
+    </view>
+    <view class='addrName' wx:else="{{showList == true}}">
+      <text decode="{{true}}" space="{{true}}" class='username'>{{item.name}}</text>
+      <text decode="{{true}}" space="{{true}}">&nbsp; &nbsp;{{item.phone}}</text>
+    </view>
+    <view class='addrDetail' wx:if="{{showList == false}}">
+      {{item.province}}{{item.city}} {{item.area}}{{item.addr_detail}}
+    </view>
+     <view class='addrDetail' wx:else="{{showList == true}}">
+      {{item.province}}{{item.city}} {{item.area}}{{item.address}}
+    </view>
+  </view>
+  <view class='handAddrView'>
+    <icon type="clear" color='#ccc' size="20" data-addid='{{item.a_id}}' bindtap='removeAddress'></icon>
+  </view>
+</view>
+
+<view class='addAddrBtn' bindtap='addAddr'>
+  新增地址
+</view>

@@ -1,0 +1,106 @@
+<view class='page'>
+  <view class='view_topname'>
+    <view style="width:192px;margin:0 auto">
+      <ui-tabs width="192px" tab-style="{{tabStyle}}" auto-width="{{false}}" index="{{ current3 }}" bindchange="handleChange3" _pid="{{_pid}}">
+        <ui-tab _pid="{{_pid}}">
+          <view class="item item-right">商品</view>
+        </ui-tab>
+        <ui-tab _pid="{{_pid}}">
+          <view class="item item-left">详情</view>
+        </ui-tab>
+        <ui-tab _pid="{{_pid}}">
+          <view class="item item-left">评论</view>
+        </ui-tab>
+      </ui-tabs>
+    </view>
+  </view>
+  <swiper class="weui-flex content" current="{{ current3 }}" bindchange="handleContentChange3" vertical>
+    <swiper-item>
+      <!-- banner -->
+      <view class="page-section page-section-spacing swiper">
+        <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" class='swper_vw'>
+          <block wx:for="{{background}}" wx:key="item">
+            <swiper-item wx:if="{{item.image1 != ''}}">
+              <view class="swiper-item" class='imags_vw'>
+                <image src='{{item.image1}}' class='bannerImgs'></image>
+              </view>
+            </swiper-item>
+            <swiper-item wx:if="{{item.image2 != ''}}">
+              <view class="swiper-item" class='imags_vw'>
+                <image src='{{item.image2}}' class='bannerImgs'></image>
+              </view>
+            </swiper-item>
+            <swiper-item wx:if="{{item.image3 != ''}}">
+              <view class="swiper-item" class='imags_vw'>
+                <image src='{{item.image3}}' class='bannerImgs'></image>
+              </view>
+            </swiper-item>
+            <swiper-item wx:if="{{item.image4 != ''}}">
+              <view class="swiper-item" class='imags_vw'>
+                <image src='{{item.image4}}' class='bannerImgs'></image>
+              </view>
+            </swiper-item>
+          </block>
+        </swiper>
+      </view>
+      <!--  details -->
+      <view class='details_big'>
+        <view class='title_name'>{{titleName}}</view>
+        <text class='jiesao'>{{shopInfo}}</text>
+        <view class='weui-flex piceNum'>
+          <view class='pice_i'>
+            <text>{{price}}</text>
+            <text>{{otherPrice}}</text>
+          </view>
+          <view class='num_adddown'>
+            <ui-stepper height="35" width="112" min='1' _pid="{{_pid}}"></ui-stepper>
+            <text>已有{{shopNum}}人购买</text>
+          </view>
+        </view>
+        <!-- <view class='sendService'>配送/售后：巍峰养车网</view> -->
+        <!-- <view class='weui-flex suitableCarModel'>
+          <image src='../../images/car.svg'></image>
+          <text>我的车型：</text>
+          <text>选择车型查看是否适用</text>
+        </view>
+        <view class='weui-flex myCarModelIntro'>
+          <text>请选择您的车型信息</text>
+          <text>更换车型</text>
+        </view> -->
+      </view>
+      
+    </swiper-item>
+    <swiper-item>
+      <!-- shoping xaingq -->
+      <view class='bigTwo_vw'>
+        <view class='weui-flex title_vw'>商品详情</view>
+      <scroll-view scroll-y style='height:100%;' lower-threshold="50">
+        <view class='imagBox'>
+          <rich-text nodes="{{html}}"></rich-text>
+          <!-- <image src='http://img01.weifeng360.com/image/image/2017/4/25/D610CC15B51C48EB9AB8FC51E1F6A23A.jpg'></image>
+          <image src='http://img01.weifeng360.com/image/image/2017/4/25/2D083B022AB44E47AD92F2087348FA6C.jpg'></image>
+          <image src='http://img01.weifeng360.com/image/image/2017/4/25/C05B7CEF71EF44519B752538B88BEB35.jpg'></image> -->
+        </view>
+      </scroll-view>
+      </view>
+    </swiper-item>
+    <swiper-item>
+      <view class='weui-flex title_vw'>用户评论</view>
+      <view class='weui-flex conten_ping'>没有评论内容</view>
+    </swiper-item>
+  </swiper>
+
+  <view class='weui-flex footer'>
+    <view class='weui-flex shouye_Icon' bindtap='swichload'>
+      <icon class='iconfont icon-shouye'></icon>
+      <text>首页</text>
+    </view>
+    <view class='weui-flex shouye_Icon' bindtap='shopCarload'>
+      <icon class='iconfont icon-gouwuche1'></icon>
+      <text>购物车</text>
+      <text class='num_shop'>{{shopNumCar}}</text>
+    </view>
+    <view bindtap='goToByf'>一键购买</view>
+    <view bindtap='addShopCar'>加入购物车</view>
+  </view>
+</view>

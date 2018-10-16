@@ -1,0 +1,80 @@
+<!--pages/odersMatei/odersMatei.wxml-->
+<view class='page'>
+  <view class='page_bd' wx:for="{{odersDateil}}" wx:key="*this">
+    <view class='shop_list'>
+      <text>订单编号：{{item.order_id}}</text>
+      <text class='state'>{{states}}</text>
+    </view>
+    <view class='shop_list'>
+      <text>{{item.username}}</text>
+      <text>{{item.phone}}</text>
+    </view>
+    <view class='address'>
+      {{item.address}}
+    </view>
+    <view class='shop_damilte' wx:for="{{ogList}}" wx:key="*this">
+      <view class='image_vw'>
+        <image src='{{item.goods_image}}'></image>
+      </view>
+      <view class='rigth_vw'>
+        <view>
+          <text>{{item.goods_name}} </text>
+          <text class='numCount'>x{{item.goods_count}}件</text>
+        </view>
+        <text class='price_num'>￥{{item.goods_price}}</text>
+      </view>
+    </view>
+    <!-- <view class='shop_list'>
+      <text>商品总计</text>
+      <text>￥{{item.price}}.00</text>
+    </view> -->
+    <view class='shop_list'>
+      <text>运费总计</text>
+      <text>￥0.00</text>
+    </view>
+    <view class='shop_list'>
+      <text>订单总计</text>
+      <text class='oder_price'>￥{{item.price}}.00</text>
+    </view>
+    <view class='shop_list'>
+      <text>下单时间</text>
+      <text>{{item.create_time}}</text>
+    </view>
+    <view class='shop_list' wx:if="{{item.type == 1}}">
+      <text>快递单号</text>
+      <text>{{item.express_no}}</text>
+    </view>
+    <view class='shop_list' wx:if="{{item.type == 2}}">
+      <text>服务站名称</text>
+      <text>{{item.service_name}}</text>
+    </view>
+    <view class='shop_list' wx:if="{{item.type == 2}}">
+      <text>服务站联系电话</text>
+      <text>{{item.service_phone}}</text>
+    </view>
+    <view class='shop_list'>
+      <text>配送状态</text>
+      <text wx:if="{{item.type == 1}}">快递</text>
+      <text wx:else>到服务站自取</text>
+    </view>
+    <view class='shop_list'>
+      <text>评价状态</text>
+      <text wx:if="{{item.is_discuss == 0}}">未评价</text>
+      <text wx:else>已评价</text>
+    </view>
+    <view class='shop_list' wx:if="{{item.state == 4}}">
+      <text>订单完成时间</text>
+      <text>{{item.finish_time}}</text>
+    </view>
+    <view class='shop_list' wx:if="{{item.state == 5}}">
+      <text>订单取消时间</text>
+      <text>{{item.cancle_time}}</text>
+    </view>
+    <view class='shop_list'>
+      <text>订单备注</text>
+      <text>{{item.remark}}</text>
+    </view>
+    <button class='goToBys' wx:if="{{item.state == 1}}" bindtap='goToBys'>支付</button>
+  </view>
+   
+</view>

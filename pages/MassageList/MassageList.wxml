@@ -1,0 +1,23 @@
+<!--pages/MassageList/MassageList.wxml-->
+<view class='page'>
+  <view class='page_bd' wx:for="{{masgList}}" wx:key="{{item.m_id}}">
+    <view class='masLIst'>
+      <view class='title_vw'>
+        <text>{{item.title}}</text>
+        <text class='timer_tx'>{{item.create_time}}</text>
+      </view>
+      <view class='magconten'>
+        <block wx:if="{{item.type == 1}}">
+          <text>系统消息：</text>
+        </block>
+        <block wx:else="{{item.type == 2}}">
+          <text>订单消息：</text>
+        </block>
+          <text>{{item.content}}</text>
+      </view>
+    </view>
+  </view>
+  <block wx:if="{{showAndnone}}">
+     <view class='removeMsg' bindtap='removeMsg'>清空</view>
+  </block>
+</view>
